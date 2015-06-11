@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean name="/register.htm"
+		class="pack.controller.RegisterController">
+		<property name="formView" value="/WEB-INF/jsp/register.jsp" />
+		<property name="commandClass"
+			value="pack.command.RegisterCommand" />
+		<property name="commandName" value="regForm"/> 		
+	</bean>	
+	<bean name="/logout.htm"
+		class="pack.controller.LogOutController">
+	</bean>		
+	<bean name="/registerLowUser.htm"
+		class="pack.controller.RegLowUserController">
+		<property name="userDAO" ref="userDAO" />
+		<property name="formView" value="/WEB-INF/jsp/regLowUser.jsp" />
+		<property name="commandClass"
+			value="pack.command.RegisterCommand" />
+		<property name="validator">
+		<bean class="pack.validator.RegValidator" />
+		</property>						
+	</bean>	
+		<bean name="/registerPowerUser.htm"
+		class="pack.controller.RegPowerUserController">
+		<property name="userDAO" ref="userDAO" />
+		<property name="formView" value="/WEB-INF/jsp/regPowerUser.jsp" />
+		<property name="commandClass"
+			value="pack.command.RegisterCommand" />
+		<property name="validator">
+		<bean class="pack.validator.RegValidator" />
+		</property>					
+	</bean>		
+	<bean name="/registerAdmin.htm"
+		class="pack.controller.RegAdminController">
+		<property name="userDAO" ref="userDAO" />
+		<property name="formView" value="/WEB-INF/jsp/regAdmin.jsp" />
+		<property name="commandClass"
+			value="pack.command.RegisterCommand" />
+		<property name="validator">
+		<bean class="pack.validator.RegValidator" />
+		</property>		
+	</bean>		
+	<bean name="/admin_view_new_users.htm"
+		class="pack.controller.AdminViewNewUsersController">
+		<property name="adminsDAO" ref="adminsDAO" />
+		<property name="lowUserDAO" ref="lowUserDAO" />
+		<property name="powerUserDAO" ref="powerUserDAO" />		
+	</bean>	
+	<bean name="/confirm_users.htm"
+		class="pack.controller.ConfirmUsersController">
+		<property name="adminsDAO" ref="adminsDAO" />
+		<property name="powerUserDAO" ref="powerUserDAO" />		
+	</bean>	
+	<bean name="/admin_view_users.htm"
+		class="pack.controller.AdminViewUsersController">
+		<property name="adminsDAO" ref="adminsDAO" />
+		<property name="powerUserDAO" ref="powerUserDAO" />
+		<property name="lowUserDAO" ref="lowUserDAO" />
+	</bean>
+	<bean name="/delete_users.htm"
+		class="pack.controller.DeleteUsersController">
+		<property name="adminsDAO" ref="adminsDAO" />
+		<property name="lowUserDAO" ref="lowUserDAO" />
+		<property name="powerUserDAO" ref="powerUserDAO" />
+	</bean>	
+	<bean name="/start_page.htm"
+		class="pack.controller.StartPageController">
+		<property name="adminsDAO" ref="adminsDAO" />
+		<property name="lowUserDAO" ref="lowUserDAO" />
+		<property name="powerUserDAO" ref="powerUserDAO" />
+		<property name="userDAO" ref="userDAO" />
+	</bean>	
+	<bean name="/all_storage.htm"
+		class="pack.controller.AllStorageController">
+		<property name="storageDAO" ref="storageDAO" />
+	</bean>	
+	<bean name="/getStorage.htm"
+		class="pack.controller.GetStorageController">
+		<property name="storageDAO" ref="storageDAO" />
+	</bean>	
+	<bean name="/all_pz.htm"
+		class="pack.controller.AllPZController">
+		<property name="pzDAO" ref="pzDAO" />
+	</bean>	
+	<bean name="/getPZ.htm"
+		class="pack.controller.GetPZController">
+		<property name="pzDAO" ref="pzDAO" />
+		<property name="manipulationDAO" ref="manipulationDAO" />
+		<property name="controlDAO" ref="controlDAO" />
+	</bean>		
+	<bean name="/compat.htm"
+		class="pack.controller.CompatController">
+		<property name="pzDAO" ref="pzDAO" />
+		<property name="storageDAO" ref="storageDAO" />
+		<property name="compatibilityDAO" ref="compatibilityDAO" />
+	</bean>		
+</beans>

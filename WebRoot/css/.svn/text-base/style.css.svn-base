@@ -1,0 +1,188 @@
+<style type="text/css">  
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #4A5157;
+}
+#chat {
+	margin: 45px 0 20px 0;
+	background-color: #ffd9d9;
+	width: 1000px;
+}
+h1, h2, h3 {
+	color: #292929;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 13px;
+}
+
+p, ul, ol {
+	margin-bottom: 2em;
+	text-align: justify;
+	line-height: 200%;
+}
+
+#header {
+	background-color: #ffd9d9;
+	width: 1000px;
+	height: 160px;
+	margin: 0 auto;
+}
+
+#page {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#content {
+	float: left;
+	width: 580px;
+	padding: 0 0 0 10px;
+}
+
+#content h1 {
+	margin: 45px 0 20px 0;
+	padding-left: 33px;
+}
+
+
+.post h1.title {
+	margin: 45px 0 20px 0;
+	padding-left: 33px;
+}
+
+.post h2.title {
+	margin: 40px 0 25px 0;
+	text-align: center;
+
+
+}
+
+.post .title a {
+	text-decoration: none;
+	color: #292929;
+}
+
+.post .entry {
+	padding-left: 32px;
+}
+
+.post ul, .post ol {
+	margin-left: 3em;
+}
+
+.post ul {
+	list-style-type: square;
+}
+
+.post ol {
+	list-style-type: decimal;
+}
+
+#sidebar {
+	float: left;
+	width: 200px;
+	padding: 40px 0px 0 0;
+}
+
+#sidebar2 {
+	float: right;
+	width: 200px;
+	padding: 40px 0px 0px 0px;
+}
+
+#sidebar a {
+	color: #4A5157;
+}
+
+.box {
+	background-color: #ffd9d9;
+}
+
+.box .title {
+	height: 27px;
+	padding: 6px 0 0 34px;
+	background: #C80000;
+
+	font-size: 17px;
+	color: #FFFFFF;
+}
+
+.box .content {
+	padding-left: 26px;
+	padding-right: 26px;
+	padding-top: 10px;
+}
+
+.box ul {
+	list-style: none;
+	line-height: normal;
+}
+
+.box ul li {
+	margin-bottom: 13px;
+	font-size: 12px;
+}
+
+.box small {
+	font-size: 10px;
+	color: #808C96;
+}
+.tableHoriz{
+    border-collapse: collapse;
+    border: 2px solid #ffd9d9;
+    }
+
+.tableHoriz .header{
+	background-color: #ffd9d9;
+	text-align: center;
+	font-weight: bold;
+	border-color: #ffd9d9;
+}
+
+.tableHoriz .header td {
+	padding: 10px
+	
+}
+.tableHoriz .simple{
+	background-color: #ffd9d9;	
+}
+
+
+.tableHoriz td{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 2px;
+	border: 2px solid #ffd9d9;  
+}
+
+.tableHoriz td.form{
+	text-align: center;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: 1px solid #ffd9d9;
+}
+
+.letter .name {
+	height: 20px;
+	padding: 0px 0px 0px 0px;
+	background: #ffd9d9;
+	font-size: 17px;
+}
+
+</style> 

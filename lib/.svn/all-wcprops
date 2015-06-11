@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/658/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib
+END
+mailapi.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/658/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib/mailapi.jar
+END
+activation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/658/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib/activation.jar
+END
+sqljdbc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/451/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib/sqljdbc.jar
+END
+mail.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/658/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib/mail.jar
+END
+smtp.jar
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svnroot-ssl/TrainingCenter/Project_031_2/!svn/ver/658/Iteration%232/trunk/WWI/WebRoot/WEB-INF/lib/smtp.jar
+END

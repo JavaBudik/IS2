@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="sessionFactoryId"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<bean id="adminsDAO"
+		class="pack.dao.AdministratorDAO" abstract="false"
+		lazy-init="default" autowire="default" dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+
+	<bean id="powerUserDAO"
+		class="pack.dao.PowerUserDAO" abstract="false"
+		lazy-init="default" autowire="default" dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+
+	<bean id="lowUserDAO"
+		class="pack.dao.LowUserDAO" abstract="false"
+		lazy-init="default" autowire="default" dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+
+	<bean id="userDAO" class="pack.dao.UserDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>	
+	
+	<bean id="compatibilityDAO" class="pack.dao.CompatibilityDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+	
+	<bean id="storageDAO" class="pack.dao.StorageDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+	
+	<bean id="pzDAO" class="pack.dao.PZDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+	
+	<bean id="manipulationDAO" class="pack.dao.ManipulationDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+	
+	<bean id="controlDAO" class="pack.dao.ControlDAO"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryId" />
+		</property>
+	</bean>
+	
+	<bean id="characterEncodingFilter" class="org.springframework.web.filter.CharacterEncodingFilter">
+	<property name="encoding">
+	<value>Windows-1251</value>
+	</property>
+	</bean>	
+	
+</beans>
+

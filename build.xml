@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="IS" default="deploy" basedir=".">
+    <property environment="currentenv" />
+    <property file="build.${currentenv.ANT_HOST_NAME}" />
+    
+    <property name="src" value="src"/>
+    <property name="build" value="build"/>
+    <property name="classes" value="${build}/classes"/>
+    <property name="warfilename" value="${ant.project.name}.war/"/>
+    <property name="warfile" value="${build}/${warfilename}"/>
+    <property name="WebRoot" value="WebRoot" />
+    <property name="rootdir" value="../" />
+    <property name="css" value="../css"/>
+    <property name="images" value="../images"/>
+    <property name="deploy" value="C:\\Program Files\\Apache Software Foundation\\Tomcat 6.0\\webapps"/>
+    <property name="tomcatlib" value="C:/Program Files/Apache Software Foundation/Tomcat 6.0/lib"/>
+    
+    
+    
+    <target name="init" depends="clean">
+       <mkdir dir="${build}"/>
+       <mkdir dir="${classes}"/>
+       
+    </target>
+    
+    <target name="clean">
+       <echo message="Cleaning project workspace"/>
+       <delete dir="${build}"/>
+              
+    </target>
+    
+    <path id="class.path">
+       <pathelement path="${currentenv.classpath}"/>
+           <fileset dir="${WebRoot}/WEB-INF/lib">
+                <include name="**/*.jar"/>
+                <include name="**/*.zip"/>
+           </fileset>
+           <fileset dir="${tomcatlib}">
+                <include name="**/*.jar"/>
+                <include name="**/*.zip"/>
+           </fileset>
+           <fileset dir="../IS/lib">
+                <include name="**/*.jar"/>
+                <include name="**/*.zip"/>
+           </fileset>
+           
+    </path>
+    
+    <target name="compile" depends="init">
+       <echo>Compiling project WWI</echo>
+       <javac classpathref="class.path" srcdir="${src}" destdir="${classes}">
+          <classpath>         
+              <pathelement path="${class.path}"/>
+          </classpath>
+       </javac>          
+          
+    </target>
+    
+    <target name="war" depends="compile">
+        <war destfile="${warfile}" needxmlfile="false">
+            <classes dir="${classes}"/>
+            <fileset dir="${WebRoot}"/> 
+            <lib dir="lib"/>          
+                                             
+        </war>
+    
+    </target>
+    
+    <target name="deploy" depends="war">
+        <echo message="Dep WWI"/>
+        <copy file="${warfile}" todir="${deploy}"/>
+        
+            
+    </target>
+    <target name="undeploy">
+       <echo message="Undep WWI"/>
+       <delete file="${deploy}/${warfilename}"/>
+       <delete dir="${deploy}/${ant.project.name}"/>
+    
+    </target>
+    
+</project>

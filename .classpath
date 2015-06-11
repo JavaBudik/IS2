@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING25_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING25_WEB"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING25_AOP"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.springframework.MYECLIPSE_SPRING25_PERSISTENCE_CORE"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Alex/lastSVNWorkingWWI/WWI/lib/spring-security-taglibs-2.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Alex/lastSVNWorkingWWI/WWI/lib/sqljdbc.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Alex/lastSVNWorkingWWI/WWI/lib/spring-security-core-2.0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Alex/lastSVNWorkingWWI/WWI/lib/spring-security-core-tiger-2.0.4.jar"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_2_CORE"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_2_EM"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
